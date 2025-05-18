@@ -21,12 +21,29 @@ The ability to accurately detect and classify objects from the air is of crucial
 
 
 ## Setup Intructions
-Please choose a preferred setup option below.
+Please choose a preferred setup option below (we strongly recommend Google Colab for ease of use and as that was our primary coding environment).
 
 ### Option 1: Run in Google Colab
-1. Navigate to the `code/DeepLearning_MS2.ipynb` file and either download it to your device or select "Open in Colab" option at the top of the notebook.
-2. Now in Colab, make sure to connect to a runtime and select the "GPU" option.
+1. Navigate to the `code/DeepLearning_Final.ipynb` file and download it to your device.
+2. Now in Colab, open the file and make sure to connect to a runtime and select the "GPU" option.
 3. Press "Run all" or walk through the notebook cell by cell.
+4. See below for the data structure that should exist in your Colab environment after the initial data download steps:
+
+```
+VisDrone/
+├── VisDrone2019-DET-test-dev/
+│   ├── annotations/
+│   └── images/
+├── VisDrone2019-DET-train/
+│   ├── annotations/
+│   └── images/
+├── VisDrone2019-DET-val/
+│   ├── annotations/
+│   └── images/
+├── VisDrone2019-DET-test-dev.zip
+├── VisDrone2019-DET-train.zip
+└──  VisDrone2019-DET-val.zip
+```
 
 ### Option 2: Run Locally via GitHub
 1. First, clone the repository and navigate to the directory:
@@ -34,24 +51,24 @@ Please choose a preferred setup option below.
 git clone https://github.com/ldmcgo26/deep_learning.git
 cd deep_learning
 ```
-2. This code assumes a MacOS computer and therefore `mps` as the designated device GPU. If using a Windows or Linux machine, it will be necessary to manually switch device GPU setup to `cuda`.
+2. *Important Note:* This code assumes a Windows computer and therefore `cuda` as the designated device GPU. If using a MacOS computer or `cuda` is not available, it will be necessary to manually switch device GPU setup to `mps`, `cpu`, or another option of your choice.
 3. Install requirements (preferably within a virtual environment to limit system impacts).
 ```
 pip install -r requirements.txt
 ```
 4. Navigate to `code/dataset_setup.ipynb` and run the code to download the data directly from dropbox urls.
 5. See below for the finalized project structure that should now exist on your local environment.
+6. Navigate to `code/DeepLearning_Final(local).ipynb` and run the code.
 
-
-## Project Structure
 ```
 deep_learning/
 ├── code/
 │   ├── dataset_setup.ipynb 
-│   ├── DeepLearning_MS1.ipynb
+│   ├── DeepLearning_Final(local).ipynb
+│   ├── DeepLearning_Final.ipynb
+│   ├── MS1_DataProcessing.ipynb
 │   ├── MS2_Data&Baseline.ipynb
-│   ├── MS2_DeepLearningModel.ipynb
-│   └── PreviousVersionDeepLearningModel(for_reference).ipynb
+│   └── MS2_DeepLearningModel.ipynb
 ├── data/
 │   ├── VisDrone2019-DET-test-dev/
 │   │   ├── annotations/
@@ -64,12 +81,11 @@ deep_learning/
 │   │   └── images/
 │   ├── VisDrone2019-DET-test-dev.zip
 │   ├── VisDrone2019-DET-train.zip
-│   └──  VisDrone2019-DET-val.zip
+│   └── VisDrone2019-DET-val.zip
 ├── presentations/
+│   ├── Deep Learning Final Presentation.pptx
 │   ├── Deep Learning MS1.pptx
-│   ├── Deep Learning MS2.pptx
-│   ├── Deep-Learning-MS1.txt
-│   └── Deep-Learning-MS2.txt
+│   └── Deep Learning MS2.pptx
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -83,4 +99,10 @@ deep_learning/
 - https://arxiv.org/abs/1506.01497
 
 
-## License
+## Citation
+
+This project uses the [VisDrone](http://aiskyeye.com/) dataset for object detection and tracking tasks. The following paper is cited:
+
+**Detection and Tracking Meet Drones Challenge**  
+Pengfei Zhu, Longyin Wen, Dawei Du, Xiao Bian, Heng Fan, Qinghua Hu, Haibin Ling  
+*IEEE Transactions on Pattern Analysis and Machine Intelligence*, Vol. 44, No. 11, pp. 7380–7399, 2021. https://ieeexplore.ieee.org/document/9573394
