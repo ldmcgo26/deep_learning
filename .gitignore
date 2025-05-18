@@ -15,3 +15,6 @@ __pycache__/
 
 # Expensive data downloads
 data/*
+
+# Except the folder itself
+!data/.gitkeep

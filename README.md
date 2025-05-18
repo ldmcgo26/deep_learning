@@ -13,7 +13,7 @@
   - [Option 2: Local](#option-2-run-locally-via-github)
 - [Project Structure](#project-structure)
 - [References](#references)
-- [License](#license)
+- [Citation](#citation)
 
 
 ## Overview
@@ -42,7 +42,7 @@ VisDrone/
 │   └── images/
 ├── VisDrone2019-DET-test-dev.zip
 ├── VisDrone2019-DET-train.zip
-└──  VisDrone2019-DET-val.zip
+└── VisDrone2019-DET-val.zip
 ```
 
 ### Option 2: Run Locally via GitHub
@@ -60,6 +60,8 @@ pip install -r requirements.txt
 5. See below for the finalized project structure that should now exist on your local environment.
 6. Navigate to `code/DeepLearning_Final(local).ipynb` and run the code.
 
+
+## Project Structure
 ```
 deep_learning/
 ├── code/
