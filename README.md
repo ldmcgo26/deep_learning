@@ -82,8 +82,9 @@ deep_learning/
 │   ├── VisDrone2019-DET-test-dev.zip
 │   ├── VisDrone2019-DET-train.zip
 │   └── VisDrone2019-DET-val.zip
-├── presentations/
+├── files/
 │   ├── Deep Learning Final Presentation.pptx
+│   ├── Deep Learning Final Report.pdf
 │   ├── Deep Learning MS1.pptx
 │   └── Deep Learning MS2.pptx
 ├── .gitignore
